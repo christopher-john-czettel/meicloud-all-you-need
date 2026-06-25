@@ -38,6 +38,10 @@ To update later, right-click the instance → "Edit" → "Version" → "Update P
 
 Per-mod documentation lives on the private wiki at https://atm10.meicloud.net/wiki/. The pack is deployed against that server.
 
+## Installation
+
+Step-by-step Prism Launcher install with screenshots: **[docs/INSTALL.md](docs/INSTALL.md)**. Covers importing the `.mrpack`, applying the Java heap + GC settings (16 GB Min/Max with G1, plus the full JVM args block), and first-launch expectations.
+
 ## Performance tuning
 
 If your 1 % lows feel rough, the [Performance tuning guide](docs/PERFORMANCE.md) covers four tiers of fixes (Win11 settings → AMD/NVIDIA driver profiles → MC video options → JVM flags) with the biggest single wins first.
