@@ -13159,11 +13159,6 @@ hash = "22523481b7a5b3be8e086462d6598a209d5ccdd3fea0c6a2c6384e9aa92b40ec"
 metafile = true
 
 [[files]]
-file = "mods/automodpack.pw.toml"
-hash = "37fae98312e06a78ea5193c45bc6c92128885e7d3cb16e63b14ac8d30520ca7c"
-metafile = true
-
-[[files]]
 file = "mods/bad-wither-no-cookie-reloaded.pw.toml"
 hash = "fa68bc1eb6c832087e11a130e589cabeb1a891ea94db8246abd245745556b68d"
 metafile = true
