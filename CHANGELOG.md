@@ -3,6 +3,22 @@
 
 All notable changes to **meiCloud — All You Need** are documented here.
 
+## [0.2.0] — 2026-06-25
+
+### Changed — distribution model pivot
+- **AutoModpack now drives in-game mod sync.** Added `automodpack-mc1.21.1-neoforge-4.0.5` (`side = "both"`). Once you import this mrpack once and connect to the meiCloud server, every subsequent mod update flows from the server to your client automatically when you rejoin. No more "delete instance + re-import 1.3 GB" for a single bug fix.
+- The `.mrpack` is still the first-install artifact. AutoModpack rides on top of it, not in place of it. v0.1.x's manual update flow is retired.
+
+### How AutoModpack works for us
+- The server runs an AutoModpack listener multiplexed onto the existing Minecraft port (`25565`) via packet detection. No firewall changes, no extra DNS, no separate edge-router config.
+- Client auth is gated by the Minecraft whitelist — AutoModpack only mints sync tokens for whitelisted players. Tokens rotate every 14 days.
+- First connect prompts a one-time TLS fingerprint accept in the AutoModpack client UI. After that it's silent.
+- The server's `syncedFiles` glob covers `/mods/*.jar`, `/kubejs/**` (excluding `server_scripts/`), the FTB Quests chapter files, the Patchouli welcome book, and `/shaderpacks/`+`/resourcepacks/` if you put any there.
+
+### What you actually do as a player
+- **First time:** import this `.mrpack` in Prism Launcher. Connect to `atm10.meicloud.net`. Accept the AutoModpack TLS fingerprint once. Play.
+- **Every time after:** launch the instance, connect, AutoModpack pulls any deltas in the background. No manual steps.
+
 ## [0.1.2] — 2026-06-25
 
 ### Fixed
