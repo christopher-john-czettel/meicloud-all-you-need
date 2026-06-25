@@ -1,0 +1,13 @@
+name = "Create : Beyond Limits"
+filename = "createbeyondlimits-1.5.0.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/Iwg4G85t/versions/OBaejBfx/createbeyondlimits-1.5.0.jar"
+hash-format = "sha512"
+hash = "ef9e635cfcd6767211cf700a15d38cbd2b6c14438bb33b9731a98dd6210cb3e17b23dcf610132064f596053feaff895dabf70134f0348aaed4afc025ecc9e5c2"
+
+[update]
+[update.modrinth]
+mod-id = "Iwg4G85t"
+version = "OBaejBfx"

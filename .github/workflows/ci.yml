@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install packwiz
+        run: |
+          curl -sL https://go.dev/dl/go1.24.4.linux-amd64.tar.gz | sudo tar -xz -C /usr/local
+          export PATH=/usr/local/go/bin:$HOME/go/bin:$PATH
+          go install github.com/packwiz/packwiz@latest
+          echo "/usr/local/go/bin" >> $GITHUB_PATH
+          echo "$HOME/go/bin" >> $GITHUB_PATH
+
+      - name: packwiz refresh (consistency check)
+        run: |
+          cd pack
+          packwiz refresh
+
+      - name: gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: markdownlint
+        uses: DavidAnson/markdownlint-cli2-action@v17
+        with:
+          globs: '**/*.md'
+
+      - name: shellcheck
+        uses: ludeeus/action-shellcheck@master
+        with:
+          scandir: './tools'
+        if: hashFiles('tools/*.sh') != ''

@@ -1,0 +1,13 @@
+name = "Bibliobiomes Legacy"
+filename = "bibliobiomes-1.21.1-1.6.2.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "5128b9a9f9f9bb1d8571f87f8529bf62ffcc6920"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8049908
+project-id = 1230590

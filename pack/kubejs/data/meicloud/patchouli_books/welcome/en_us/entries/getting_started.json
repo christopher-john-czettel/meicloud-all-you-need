@@ -1,0 +1,22 @@
+{
+  "name": "Getting started",
+  "icon": "minecraft:compass",
+  "category": "meicloud:welcome",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Welcome to meiCloud — All You Need",
+      "text": "$(bold)Friends-only ATM10 derivative$(reset)$(br)$(br)This pack adds 30+ mods to ATM10 7.0 — airships, cannons, trains, integrations, and a space chain.$(br)$(br)Live wiki: $(l:https://atm10.meicloud.net/wiki/)atm10.meicloud.net/wiki/$()"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Headliners",
+      "text": "$(li)$(bold)Create: Aeronautics$()  Build airships and pilot them.$(br)$(li)$(bold)Create: Big Cannons$()  Mount artillery on your ships.$(br)$(li)$(bold)Steam'n'Rails$()  Real trains across biomes.$(br)$(li)$(bold)Creating Space$()  Build rockets, reach orbit.$(br)$(li)$(bold)Lithium + Sodium + Iris$()  Performance + shaders.$(br)$(li)$(bold)Distant Horizons$()  See chunks well past view distance."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "House rules",
+      "text": "$(li)$(bold)PvP is OFF.$()  Sword swings on other players do nothing.$(br)$(li)$(bold)Mob griefing is OFF.$()  Creepers don't blow up your base.$(br)$(li)$(bold)Hardcore-ish:$()  keepInventory is OFF, prepare for death.$(br)$(li)$(bold)View distance 14 / sim 12.$()  Your client may need to match.$(br)$(li)$(bold)8 max players.$()  Friends only."
+    }
+  ]
+}

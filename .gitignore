@@ -1,0 +1,22 @@
+# packwiz cache
+.packwiz/
+.cache/
+
+# Build artifacts
+*.mrpack
+*.zip
+releases/
+
+# Branding source files (commit final PNG only, not Photoshop/Affinity files)
+*.psd
+*.afdesign
+*.kra
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db

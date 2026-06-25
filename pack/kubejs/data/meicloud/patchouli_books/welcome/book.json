@@ -1,0 +1,10 @@
+{
+  "name": "meiCloud — Welcome",
+  "landing_text": "Welcome to meiCloud — All You Need. This book is your starter guide.",
+  "subtitle": "Friends-only ATM10 derivative",
+  "creative_tab": "misc",
+  "use_resource_pack": true,
+  "i18n": false,
+  "model": "patchouli:book_brown",
+  "show_progress": false
+}

@@ -1,0 +1,13 @@
+name = "⛏️ Create Ore Excavation x Mekanism"
+filename = "COExMekanism1.21_v2.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/X3JrSEC3/versions/Ir0cEBNz/COExMekanism1.21_v2.jar"
+hash-format = "sha512"
+hash = "49d2e1cd930b0b3d7d5b311ba7aac040f167e7982d595c7034ebbc42c70e361832d970cab40c746545e3d0fe93e1ceee302339278c034036053b80fb4ab92601"
+
+[update]
+[update.modrinth]
+mod-id = "X3JrSEC3"
+version = "Ir0cEBNz"

@@ -1,0 +1,7 @@
+title = "gitleaks config for meicloud-all-you-need"
+
+[[rules]]
+id = "curseforge-api-key"
+description = "CurseForge API key (bcrypt format)"
+regex = '''\$2a\$10\$[a-zA-Z0-9./]{53}'''
+keywords = ["curseforge", "cf_key", "cf-token"]

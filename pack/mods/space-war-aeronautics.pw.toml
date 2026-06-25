@@ -1,0 +1,13 @@
+name = "Space War - Aeronautics"
+filename = "space_war_aeronautics-0.1.4.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/fzGgb6N0/versions/NTXVdUI1/space_war_aeronautics-0.1.4.jar"
+hash-format = "sha512"
+hash = "282e643cbd189521a5d226f9d9d05ab9932bedb5281b95837d61a0940a62769cbebf1897e9379c43d20e5279dd956c2ba6eb626e6c094ef8b2f8bbc712d42dd6"
+
+[update]
+[update.modrinth]
+mod-id = "fzGgb6N0"
+version = "NTXVdUI1"
