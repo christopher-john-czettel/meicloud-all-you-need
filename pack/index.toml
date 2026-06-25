@@ -4088,6 +4088,10 @@ file = "defaultconfigs/justdirethings-common.toml"
 hash = "09e84180732751b177b084b893cb0ffbd237111ebe2a092ad49a13c854771877"
 
 [[files]]
+file = "icon.png"
+hash = "8d6c57469ed6788be69d8d9c86359a09530fb35db349870e1aac5400a6027935"
+
+[[files]]
 file = "kubejs/README.md"
 hash = "23b45d6c3c70309c53e50044884f9de0b6538a8e442f4be97c6654db7b6f67a9"
 
@@ -12926,7 +12930,7 @@ metafile = true
 
 [[files]]
 file = "mods/advanced-peripherals.pw.toml"
-hash = "95260471eefa73e63432e990724810d0f6e9fa5e5fca1cbc4dd8124263330c8a"
+hash = "8e4430ae502559e3049014c606243b4fa890e386880879d48cb9cb11165d6993"
 metafile = true
 
 [[files]]
@@ -13282,11 +13286,6 @@ metafile = true
 [[files]]
 file = "mods/cc-tweaked-remastered.pw.toml"
 hash = "0b160d9dcda83ac067c4bceee0faf659e7c5935135b17a20c51024dac1678d30"
-metafile = true
-
-[[files]]
-file = "mods/cc-tweaked.pw.toml"
-hash = "76a175f859f5d051ffee34c3834925c637b762cc938c06d0655e378984e758f5"
 metafile = true
 
 [[files]]
@@ -14261,7 +14260,7 @@ metafile = true
 
 [[files]]
 file = "mods/lithostitched.pw.toml"
-hash = "e2a4209ef47d6a109d75669cc048e7a73a2e7d36195898c490e26cf76e32c396"
+hash = "75d21d70ee36cccb4fb48b69ce654fd3bf5e05e46ffac006d5753b3a4eef4852"
 metafile = true
 
 [[files]]

@@ -1,5 +1,5 @@
 name = "Advanced Peripherals"
-filename = "AdvancedPeripherals-1.21.1-0.7.62b.jar"
+filename = "AdvancedPeripherals-1.21.1-0.7.61b.jar"
 side = "both"
 
 [download]
@@ -9,5 +9,5 @@ mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 8228816
+file-id = 7843484
 project-id = 431725

@@ -3,6 +3,15 @@
 
 All notable changes to **meiCloud — All You Need** are documented here.
 
+## [0.1.1] — 2026-06-25
+
+### Fixed
+- **Boot crash on first launch.** Three compatibility issues from `packwiz update --all`:
+  - Pinned **Advanced Peripherals** back from `0.7.62b` to `0.7.61b` — `0.7.62b` requires CC: Tweaked `1.119.0+`, only available as alpha. ATM10 ships CC: Tweaked `1.117.1`.
+  - Removed duplicate **CC: Tweaked** entry. ATM10's manifest listed both the original (CF project 282001, version 1.113.1) and the "Remastered" fork (CF project 1527866, version 1.117.1). Kept only the Remastered one.
+  - Fixed **Lithostitched** `side = "server"` → `side = "both"`. Required client-side by Tectonic, Terralith, Regions Unexplored, and CTOV. Prism was correctly excluding it from the client install because of the side flag.
+- Re-export produces a smaller / correct `.mrpack`.
+
 ## [0.1.0] — 2026-06-25
 
 ### Base
