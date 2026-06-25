@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 MD034 -->
 # meiCloud — All You Need
 
 ![pack icon](pack/icon.png)
