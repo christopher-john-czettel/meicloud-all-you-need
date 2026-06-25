@@ -3,6 +3,11 @@
 
 All notable changes to **meiCloud — All You Need** are documented here.
 
+## [0.1.2] — 2026-06-25
+
+### Fixed
+- **Boot crash from `mek_x_star` mixin.** Removed Mekanism × Create: Northstar (`mek_x_star-1.21.1-1.0.2`). The mod is a compatibility bridge between Mekanism and **Create: Northstar** — a space mod that has no 1.21.1 release. Without Northstar, the mod's `ItemStackMixin` fails to load `NorthstarTags$NorthstarItemTags`, killing bootstrap. I had read its name as a generic Mek↔Create integration; it isn't.
+
 ## [0.1.1] — 2026-06-25
 
 ### Fixed

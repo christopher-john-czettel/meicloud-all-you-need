@@ -14394,11 +14394,6 @@ hash = "2d6a6b9cef775c2baff586138fd0833595000295b645cc9813f84833c38cb415"
 metafile = true
 
 [[files]]
-file = "mods/mekanism-x-create-northstar.pw.toml"
-hash = "b1aa929c69d6b95d67522719efe8c053ca87fb37f928c9658a35ee6573a5713c"
-metafile = true
-
-[[files]]
 file = "mods/mekanism.pw.toml"
 hash = "42061fd570a0b7a8063c0860056c6391593190caa0f12d3b49105e52a56817fe"
 metafile = true
