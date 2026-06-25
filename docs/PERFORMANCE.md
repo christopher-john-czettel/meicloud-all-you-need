@@ -154,9 +154,48 @@ If exploring lots of new chunks (initial pre-gen, new dimensions), adding **C2ME
 
 ## Tier D — JVM lever (try last, revert if it backfires)
 
-### Lower G1's pause target
+### Prism Java settings — exact configuration
 
-Edit Prism: right-click instance → **Edit Instance → Settings → Java → JVM Arguments**. Change:
+A fresh `.mrpack` install in Prism Launcher does NOT carry JVM args or heap size — those are per-Prism-install settings. Re-apply these on every new instance:
+
+**Prism Launcher → right-click instance → Edit → Settings → Java**
+
+| Pane | Setting | Value | Why |
+|---|---|---|---|
+| Java | **Java path** | auto-detect (Java 21 / Microsoft OpenJDK 21+) | NeoForge 1.21.1 requires Java 21 |
+| Memory | **Override Memory** | ☑ on | enables the two fields below |
+| Memory | **Maximum memory allocation** | **16384** MiB (16 GB) | Working set with DH + 556 mods + EMI index is ~9-11 GB; 16 GB leaves headroom for SimpleBackups bursts without G1 thrash. The `G1HeapRegionSize=8M` sweet spot is 2–32 GB; past 16 GB G1 young-gen scans creep into perceptible pause territory. |
+| Memory | **Minimum memory allocation** | **16384** MiB (16 GB) | Match Max so the JVM doesn't grow/shrink the heap at runtime. `+AlwaysPreTouch` commits the full heap up-front anyway. |
+| Memory | **PermGen** | leave at default (128) | Legacy MC pre-1.8 setting; harmless on Java 21 |
+| Arguments | **Override JVM Arguments** | ☑ on | enables the args box |
+| Arguments | **JVM Arguments** | (block below) | G1 was the working GC; ZGC OOM'd this workload |
+
+**JVM Arguments — copy/paste this exact block:**
+
+```
+-XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=8M -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -Dfml.readTimeout=180 -Dfml.loginTimeout=180
+```
+
+What each flag does:
+
+| Flag | What it does |
+|---|---|
+| `-XX:+UnlockExperimentalVMOptions` | Required by some `G1*` flags |
+| `-XX:+UseG1GC` | G1 garbage collector. ZGC OOM'd; Shenandoah untested on this pack — stay on G1. |
+| `-XX:G1NewSizePercent=20` | Young generation is 20 % of heap (3.2 GB at 16 GB). Right-sized for high-allocation modded MC. |
+| `-XX:G1ReservePercent=20` | Reserve 20 % of heap as buffer; prevents promotion failures during allocation spikes. |
+| `-XX:MaxGCPauseMillis=50` | Target max GC pause is 50 ms. Drop to **30** if you're stutter-sensitive (trades ~2-3 % avg FPS for tighter 1 % lows). |
+| `-XX:G1HeapRegionSize=8M` | 8 MB regions. Sweet spot for heap sizes 2-32 GB. |
+| `-XX:+ParallelRefProcEnabled` | Parallelizes reference processing across CPU cores. Free win on 8+ core CPUs. |
+| `-XX:+AlwaysPreTouch` | Commits the full heap to physical RAM at startup. Prevents first-explore stutter from heap growth. |
+| `-Dfml.readTimeout=180` | Mod-loading read timeout in seconds. 180 = 3 min. Vanilla default is 90; we need more because 564 mods. |
+| `-Dfml.loginTimeout=180` | Server-login handshake timeout. Same reasoning. |
+
+### Lower G1's pause target (optional — if microstuttering)
+
+In the `JVM Arguments` field, change `-XX:MaxGCPauseMillis=50` → `-XX:MaxGCPauseMillis=30`. G1 collects more often with shorter pauses — directly improves 1 % lows. Trade-off: ~2–3 % drop on average FPS. Worth it if stutter bothers you.
+
+### Reference: full JVM args block (same as above, formatted)
 
 ```
 -XX:MaxGCPauseMillis=50

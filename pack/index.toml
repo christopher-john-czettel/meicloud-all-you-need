@@ -1,18 +1,8 @@
 hash-format = "sha256"
 
 [[files]]
-file = "bsl-shaders.pw.toml"
-hash = "4a5ea44fb3e87c430dbb19df9587ec93bd189ea1a12a15ed190dde3cf5a5cf13"
-metafile = true
-
-[[files]]
 file = "complementary-reimagined.pw.toml"
 hash = "335d3e0f28b42381f929c9997dd188cd656178904833c2d1b01dfd3e098b0569"
-metafile = true
-
-[[files]]
-file = "complementary-unbound.pw.toml"
-hash = "d5bbf1d80ecd2261d38311b897469fdd2dd48029bc520193bfefbc4407f5cc81"
 metafile = true
 
 [[files]]
@@ -173,7 +163,7 @@ hash = "7d2e9a742c9ad0c142c89ded2f80e8a2577c3aba8107454a0889e155e304216d"
 
 [[files]]
 file = "config/bcc-common.toml"
-hash = "2247790c5409c7b76fdd31728f1f076364289598576fda4045017fbf7a2b278f"
+hash = "86ffae0d24d0d03a8bafbe5cc86fa51f7f07398fc56b57228650ffdbaba02726"
 
 [[files]]
 file = "config/bibliocraft-client.toml"
@@ -12970,11 +12960,6 @@ hash = "bf4ac55e9f7b8f68eda595f04226a323e90f8533e52c4654b569874b7b882089"
 [[files]]
 file = "local/kubejs/dev.json"
 hash = "997254d712d3f842582dcb646da871df778d49bd48949ea733724f92b1633a08"
-
-[[files]]
-file = "makeup-ultra-fast-shader.pw.toml"
-hash = "a9dca058c0fd17f9cf753e100b0f150e492baa03b45069317b34aa94fa015df2"
-metafile = true
 
 [[files]]
 file = "mods/accelerated-decay.pw.toml"
