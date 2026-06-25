@@ -1,5 +1,7 @@
 # meiCloud — All You Need
 
+![pack icon](pack/icon.png)
+
 A private ATM10-derivative modpack for Minecraft 1.21.1 on NeoForge.
 
 **Status:** v0.1.0 — friends-only. Not seeking general distribution.
