@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD013 MD024 MD025 MD032 MD022 MD036 -->
+<!-- markdownlint-disable MD013 MD024 MD025 MD032 MD022 MD036 MD060 -->
 # Performance tuning — meiCloud — All You Need
 
 This pack is a 556-mod NeoForge 1.21.1 build with Distant Horizons, Iris+BSL shaders, Create + Big Cannons + Aeronautics + Creating Space, Sable physics, ModernFix, and a heap of other interactive systems. On modern hardware (Ryzen 7000+ / Radeon 7000+ / 32+ GB RAM) you should comfortably see **avg 60–90 FPS at default settings with shaders on**.
@@ -172,7 +172,7 @@ A fresh `.mrpack` install in Prism Launcher does NOT carry JVM args or heap size
 
 **JVM Arguments — copy/paste this exact block:**
 
-```
+```text
 -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=8M -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -Dfml.readTimeout=180 -Dfml.loginTimeout=180
 ```
 
@@ -197,13 +197,13 @@ In the `JVM Arguments` field, change `-XX:MaxGCPauseMillis=50` → `-XX:MaxGCPau
 
 ### Reference: full JVM args block (same as above, formatted)
 
-```
+```text
 -XX:MaxGCPauseMillis=50
 ```
 
 to
 
-```
+```text
 -XX:MaxGCPauseMillis=30
 ```
 
@@ -213,7 +213,7 @@ G1GC will collect more often but with shorter pauses — directly improves 1 % l
 
 These are what our pack ships in `instance.cfg` (G1 + 16 GB heap + ParallelRefProc + AlwaysPreTouch):
 
-```
+```text
 -XX:+UnlockExperimentalVMOptions
 -XX:+UseG1GC
 -XX:G1NewSizePercent=20

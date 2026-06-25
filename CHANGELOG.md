@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD013 MD024 MD032 MD022 -->
+<!-- markdownlint-disable MD013 MD024 MD032 MD022 MD060 -->
 # Changelog
 
 All notable changes to **meiCloud — All You Need** are documented here.

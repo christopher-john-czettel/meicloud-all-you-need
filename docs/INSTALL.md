@@ -1,4 +1,4 @@
-<!-- markdownlint-disable MD013 MD024 MD032 MD022 MD036 -->
+<!-- markdownlint-disable MD013 MD024 MD032 MD022 MD036 MD060 -->
 # Installation guide — meiCloud — All You Need
 
 This walks you through installing the pack on a Windows 11 desktop with Prism Launcher. Steps are functionally the same on macOS / Linux Prism — only the screenshots will look slightly different.
@@ -25,11 +25,11 @@ After installing Prism and signing in with your Microsoft account, you'll see th
 
 In the dialog, switch to the **Import** tab on the left. In the "Local file or link to a direct download" field, paste:
 
-```
-https://github.com/christopher-john-czettel/meicloud-all-you-need/releases/download/v0.2.1/meicloud-all-you-need-v0.2.1.mrpack
+```text
+https://github.com/christopher-john-czettel/meicloud-all-you-need/releases/download/v0.2.2/meicloud-all-you-need-v0.2.2.mrpack
 ```
 
-For future releases, replace `v0.2.1` with whatever the latest tag is at https://github.com/christopher-john-czettel/meicloud-all-you-need/releases.
+For future releases, replace `v0.2.2` with whatever the latest tag is at https://github.com/christopher-john-czettel/meicloud-all-you-need/releases.
 
 You can rename the instance in the **Name** field (defaults to the mrpack filename without extension). Click **OK**.
 
@@ -95,7 +95,7 @@ If your machine has only 16 GB total system RAM, drop both to **10240** (10 GB) 
 
 Paste this single line into the arguments box (one line, no newlines):
 
-```
+```text
 -XX:+UnlockExperimentalVMOptions -XX:+UseG1GC -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=8M -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -Dfml.readTimeout=180 -Dfml.loginTimeout=180
 ```
 
@@ -120,7 +120,7 @@ Should auto-detect a Java 21 install. If it doesn't, click **Open Java Downloade
 
 If you have multiple Java installs and Prism auto-picks the wrong one, hit **Browse** and point it at `javaw.exe` from a Java 21 install. Microsoft OpenJDK 21 is what most modded MC players use; the path looks like:
 
-```
+```text
 C:\Users\<you>\AppData\Roaming\PrismLauncher\java\java-runtime-delta\bin\javaw.exe
 ```
 
@@ -204,7 +204,7 @@ If server tick > 50 ms consistently, something's pegging the integrated server �
 
 For poking around without breaking anything:
 
-```
+```text
 <instance>/minecraft/
 ├── mods/                              # all the mods
 ├── config/                            # mod-side configs
