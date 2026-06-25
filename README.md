@@ -5,7 +5,7 @@
 
 A private ATM10-derivative modpack for Minecraft 1.21.1 on NeoForge.
 
-**Status:** v0.1.0 — friends-only. Not seeking general distribution.
+**Status:** v0.1.2 — friends-only. Not seeking general distribution.
 
 ## What this is
 
