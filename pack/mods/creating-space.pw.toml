@@ -1,13 +1,8 @@
-name = "Creating Space"
-filename = "creatingspace-1.21.1-1.7.18.jar"
+name = "Creating Space (meiCloud-patched)"
+filename = "creatingspace-1.21.1-1.7.18-meicloud-patched.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/8VQksBiY/versions/WKHiRq8M/creatingspace-1.21.1-1.7.18.jar"
-hash-format = "sha512"
-hash = "bdeb54354a7864e75b2a3f02fbaed48afebea8e6406b2ec656518924b99087df5cfe9cd5186028080c504437687000b1516c2c7b3f1585139f6a42fe1c16b5fc"
-
-[update]
-[update.modrinth]
-mod-id = "8VQksBiY"
-version = "WKHiRq8M"
+url = "https://raw.githubusercontent.com/christopher-john-czettel/meicloud-all-you-need/main/pack/local-jars/creatingspace-1.21.1-1.7.18-meicloud-patched.jar"
+hash-format = "sha256"
+hash = "66ad271f66348a009d2a82125dc7881d784622fb976fd09f66dab74cadfbfe01"

@@ -3,6 +3,15 @@
 
 All notable changes to **meiCloud — All You Need** are documented here.
 
+## [0.2.1] — 2026-06-25
+
+Fresh-install hotfix release. v0.2.0 had two blocking issues uncovered when @chris re-imported the mrpack into a clean Prism instance.
+
+### Fixed
+
+- **Boot crash from `creatingspace`/`WindowResizeMixin`.** Creating Space 1.7.18's `WindowResizeMixin` fires on `Minecraft.<init>` → `resizeDisplay()` → `updateWindowSize()`, which triggers `RemainingO2Overlay.<clinit>`. Static init reads `CSConfigs.CLIENT.oxygenBacktank.sliderPlace.get()` — but on NeoForge 21.1.234, creatingspace's CLIENT config spec hasn't been loaded yet at that point in `Minecraft.<init>`, throwing `IllegalStateException: Cannot get config value before config is loaded`. The old instance "worked" only because some prior crash had primed the config file on disk; a fresh install always crashes here. Patched `creatingspace-1.21.1-1.7.18.jar`: stripped `WindowResizeMixin` from `creatingspace.mixins.json` client array and removed the corresponding `.class` file. The mod still works — only the post-resize repositioning of the O2 overlay HUD is dropped. Re-hosted via packwiz URL mode at `pack/local-jars/`. New SHA-256 `66ad271f66348a009d2a82125dc7881d784622fb976fd09f66dab74cadfbfe01`.
+- **`BSL+Clrwl_1.0.5.zip` shaderpack didn't ship in the v0.2.0 mrpack.** The override files were committed but not in packwiz's index when the export ran. Fresh installs got only the `.txt` settings file, leaving `iris.properties` pointing at a missing shader. Re-running `packwiz refresh` re-indexed the overrides; v0.2.1 mrpack will include the 1.14 MB shader zip.
+
 ## [0.2.0] — 2026-06-25
 
 This release rolls up everything that was happening on the `0.1.3` working line — the tag was never cut at `0.1.3` because the testing exposed enough additional fixes (shader swap, JEI→EMI, GC revert, server-list pre-population, broken-recipe stubs) to warrant a real minor-version bump. The historical entries below are kept under the `[0.1.3]` header for the audit trail; this entry is the actual published release.
