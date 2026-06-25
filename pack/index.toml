@@ -163,7 +163,7 @@ hash = "7d2e9a742c9ad0c142c89ded2f80e8a2577c3aba8107454a0889e155e304216d"
 
 [[files]]
 file = "config/bcc-common.toml"
-hash = "be115ff96e2bd08da23f7cecb422755de237d5eb6513802b6ce164789ce3a2d4"
+hash = "82b312f638a3ae68a9b4abb56f193f6c9305c5851c40302b659914e8665ac1b9"
 
 [[files]]
 file = "config/bibliocraft-client.toml"
@@ -13248,11 +13248,6 @@ metafile = true
 [[files]]
 file = "mods/better-zoom.pw.toml"
 hash = "474d2513194df9be0def7c28552e060f586fba9f6cd71b531d72e712ea3c9f86"
-metafile = true
-
-[[files]]
-file = "mods/bibliobiomes-legacy.pw.toml"
-hash = "2bbe7ed0a5b6fe914a1cf3bfae797b960aab05a0c480fa9d250eb63cbc35e2c4"
 metafile = true
 
 [[files]]

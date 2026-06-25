@@ -1,12 +1,12 @@
 name = "meiCloud - All You Need"
 author = "Christopher John Czettel"
-version = "0.2.1"
+version = "0.2.2"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "fd86504b62531009c43e973d1ba0f2eedc10ccc00ae96e95c5982990770d7d20"
+hash = "b5bd43ced9c058770be51651ae076a503cff6f4c61e6d40fac2e2822d8d730c7"
 
 [versions]
 minecraft = "1.21.1"

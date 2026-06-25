@@ -3,6 +3,29 @@
 
 All notable changes to **meiCloud — All You Need** are documented here.
 
+## [0.2.2] — 2026-06-25
+
+Second fresh-install hotfix. v0.2.1 still crashed because of a regression I missed earlier in this work line.
+
+### Fixed
+
+- **`bibliobiomes-1.21.1-1.6.2.jar` regressed back into the pack.** Way back at the start of the v0.1.x line, this mod crashed with `NoSuchFieldError: net.regions_unexplored.block.RuWoodTypes.MAUVE` — `regions_unexplored` had renamed/removed the `MAUVE` wood type, breaking `bibliobiomes`' biome-modifier registration, which cascaded into `bibliocraft` failing to construct, which left mod loading in "broken state" so all later events were "Cowardly refusing to send event…to a broken mod state". On v0.1.x I removed the jar from the active instance but **never removed it from the packwiz manifest** — so v0.2.0 and v0.2.1 both shipped it again, hitting the same crash on every fresh install.
+
+  Removed `pack/mods/bibliobiomes-legacy.pw.toml`. Fresh installs of v0.2.2 will not download `bibliobiomes`. `bibliocraft` and `bibliowoods` remain (they're independent of `bibliobiomes`).
+
+### Why the v0.2.1 crash looked like an "architectury" crash
+
+The `IllegalStateException: Mod 'architectury' is not available` in v0.2.1's crash report was misleading. The actual chain:
+
+1. `bibliobiomes` event handler crashed at `bibliobiomes` mod construction
+2. `bibliocraft` construction was triggered by the same event chain and also failed
+3. NeoForge `Failed to wait for future Mod Construction, 1 errors found` → mod loading is in broken state
+4. `Minecraft.<init>` runs anyway; `omegaconfig`'s mixin calls `NetworkManager.registerReceiver` via `architectury`
+5. `architectury.whenAvailable` returns empty because its mod initialization never completed in the broken state
+6. → `Mod 'architectury' is not available!` IllegalStateException
+
+So architectury is fine; bibliobiomes is the real culprit. Same root cause as the v0.1.0 crash, just surfaced through a different downstream symptom.
+
 ## [0.2.1] — 2026-06-25
 
 Fresh-install hotfix release. v0.2.0 had two blocking issues uncovered when @chris re-imported the mrpack into a clean Prism instance.
