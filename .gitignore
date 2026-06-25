@@ -5,6 +5,7 @@
 # Build artifacts
 *.mrpack
 *.zip
+!pack/shaderpacks/*.zip
 releases/
 
 # Branding source files (commit final PNG only, not Photoshop/Affinity files)
