@@ -163,7 +163,7 @@ hash = "7d2e9a742c9ad0c142c89ded2f80e8a2577c3aba8107454a0889e155e304216d"
 
 [[files]]
 file = "config/bcc-common.toml"
-hash = "82b312f638a3ae68a9b4abb56f193f6c9305c5851c40302b659914e8665ac1b9"
+hash = "734eaf439075bcbb999175f9b75ae300ac9739c7e550009f761359eac43fba36"
 
 [[files]]
 file = "config/bibliocraft-client.toml"
@@ -3635,7 +3635,7 @@ hash = "bfd7a47f2a57b89a097dff2472c77c8332b61dc961b995c59bb2766dca480e20"
 
 [[files]]
 file = "config/iris.properties"
-hash = "9bf62791d5686d0d6438bb8af9c2d1ee8fa4b51d3dd1df560c0d0495e352ab14"
+hash = "03963e1ac21dfe450122aa0be5cc87482d26dbd661b153b2ab2b8f06177f6040"
 
 [[files]]
 file = "config/ironfurnaces-common.toml"
@@ -15499,9 +15499,9 @@ file = "servers.dat"
 hash = "6a3c6c415621cbd456620fc349c6bce4d39d40c27dca9676282ef34c14a659bb"
 
 [[files]]
-file = "shaderpacks/BSL_v10.1.1 + Clrwl_1.0.5.zip"
+file = "shaderpacks/BSL_v10.1.1_Clrwl_1.0.5.zip"
 hash = "a3613e7bdcfd29ae938ee155b4a15fd92904ddff76bfb10370d2cd931ed2d6bd"
 
 [[files]]
-file = "shaderpacks/BSL_v10.1.1 + Clrwl_1.0.5.zip.txt"
+file = "shaderpacks/BSL_v10.1.1_Clrwl_1.0.5.zip.txt"
 hash = "cfd3b08ce4149497bf59d8a64d6930bcf8c7b1c5c9a83662629af980c09f01e3"

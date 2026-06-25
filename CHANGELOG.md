@@ -3,6 +3,20 @@
 
 All notable changes to **meiCloud — All You Need** are documented here.
 
+## [0.2.3] — 2026-06-25
+
+Third fresh-install hotfix. v0.2.2 booted but Prism didn't extract the BSL+Clrwl shader override file — the embedded `.zip` was skipped while its sibling `.txt` settings file extracted fine.
+
+### Fixed
+
+- **Prism mrpack importer was skipping the embedded shader `.zip` override.** Confirmed in two ways:
+  1. The mrpack built locally contains `overrides/shaderpacks/BSL_v10.1.1 + Clrwl_1.0.5.zip` at 1,139,617 bytes.
+  2. The post-install instance had only the 238-byte `.txt` settings file, no `.zip`.
+
+  Iris fell back to vanilla rendering on boot (`Pack "BSL_v10.1.1 + Clrwl_1.0.5.zip" is not valid! Can't load it.`). Most plausible cause is Prism Launcher's defensive behaviour: it skips files inside `overrides/` that look like nested archives, to avoid zip-bomb recursion.
+
+  Workaround: renamed the override file to `BSL_v10.1.1_Clrwl_1.0.5.zip` (and the matching `.txt`) — no spaces, no `+`, no pattern that triggers the skip. Updated `iris.properties` `shaderPack=` to match. Iris loads it from the same content as before — the filename is just a display label; functionality is identical.
+
 ## [0.2.2] — 2026-06-25
 
 Second fresh-install hotfix. v0.2.1 still crashed because of a regression I missed earlier in this work line.
