@@ -1,5 +1,3 @@
-// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 10.
-// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.
 
 var miningDimOres = [
     {path: 'runic_stone',                       id:'allthemodium:runic_stone',                   min:65,  max:250,size:4, count:1,   stoneReplaces:"forbidden_arcanus:runic_stone",              deepslateReplaces:"forbidden_arcanus:runic_deepslate",                   endStoneReplaces:null,                                             netherrackReplaces:null},
@@ -139,5 +137,3 @@ ServerEvents.generateData('after_mods', allthemods => {
     })
 })
 
-// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 10.
-// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.

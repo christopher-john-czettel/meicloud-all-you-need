@@ -1,13 +1,8 @@
-name = "All The Tweaks"
-filename = "allthetweaks-1.21.1-2.9.4.jar"
+name = "All The Tweaks (meiCloud-patched)"
+filename = "allthetweaks-1.21.1-2.9.4-meicloud-patched.jar"
 side = "both"
 
 [download]
-hash-format = "sha1"
-hash = "5c0587081cda40fcb4145d2471f81c5ba6a59022"
-mode = "metadata:curseforge"
-
-[update]
-[update.curseforge]
-file-id = 8100595
-project-id = 364120
+url = "https://raw.githubusercontent.com/christopher-john-czettel/meicloud-all-you-need/main/pack/local-jars/allthetweaks-1.21.1-2.9.4-meicloud-patched.jar"
+hash-format = "sha256"
+hash = "bf4ac55e9f7b8f68eda595f04226a323e90f8533e52c4654b569874b7b882089"

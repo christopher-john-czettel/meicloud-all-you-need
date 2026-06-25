@@ -38,6 +38,10 @@ To update later, right-click the instance → "Edit" → "Version" → "Update P
 
 Per-mod documentation lives on the private wiki at https://atm10.meicloud.net/wiki/. The pack is deployed against that server.
 
+## Performance tuning
+
+If your 1 % lows feel rough, the [Performance tuning guide](docs/PERFORMANCE.md) covers four tiers of fixes (Win11 settings → AMD/NVIDIA driver profiles → MC video options → JVM flags) with the biggest single wins first.
+
 ## House rules (server-side)
 
 - **PvP off** — sword swings on other players do nothing.

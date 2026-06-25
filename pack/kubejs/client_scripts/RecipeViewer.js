@@ -1,5 +1,3 @@
-// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMod 10.
-// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.
 
 const runicYEET = [
     'modern_industrialization:runic_energy_output_hatch',
@@ -180,5 +178,3 @@ RecipeViewerEvents.removeCategories(allthemods => {
     allthemods.remove(["minecraft:grindstone"])
 })
 
-// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 10.
-// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.

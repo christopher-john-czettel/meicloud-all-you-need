@@ -1,5 +1,3 @@
-// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 10.
-// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.
 
 ServerEvents.tags('item', allthemods => {
     allthemods.add('c:storage_blocks/blaze_powder', 'kubejs:blaze_powder_block')
@@ -90,5 +88,3 @@ ServerEvents.recipes(allthemods => {
     energizing({tag: 'c:storage_blocks/blaze_rod', count: 1}, {item: 'powah:blazing_crystal_block'},1080000, 'blazing_crystal_from_block')
 })
 
-// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 10.
-// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.

@@ -1,12 +1,3 @@
-/*
-  This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 10.
-  As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.
-  Mekanism items for processing stack
-  Authored by EnigmaQuip
-
-  if using existing dust, dust must be defined until kjs tag loading fixed
-  material at a minimum should have an ore associated with it at #c:ores/material
-*/
 
 global.mekStackAdditions = [
   {material:'crimson_iron', color:'#fc9aad', makeDust: false},
@@ -51,5 +42,3 @@ StartupEvents.registry('mekanism:chemical', allthemods => {
 })
 })
 
-// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 10.
-// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.

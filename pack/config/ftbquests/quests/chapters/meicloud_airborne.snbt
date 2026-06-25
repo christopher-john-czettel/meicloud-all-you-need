@@ -1,33 +1,56 @@
 {
-	id: "meicloud_airborne_root"
-	filename: "meicloud_airborne"
-	title: "meiCloud: Airborne"
-	icon: "create_aeronautics:gyroscopic_mechanism"
-	subtitle: ["Take to the skies. Fire the cannons. Reach for space."]
+	default_hide_dependency_lines: false
 	default_quest_shape: "hexagon"
+	filename: "meicloud_airborne"
+	group: ""
+	id: "636EA583244028E8"
+	order_index: 0
+	quest_links: [ ]
 	quests: [
 		{
-			id: "meicloud_q_first_propeller"
-			x: 0.0d, y: 0.0d
-			subtitle: "Crank up the propeller."
-			tasks: [{ id: "task_propeller", type: "item", item: "create_aeronautics:propeller" }]
-			rewards: [{ id: "r1", type: "xp", xp: 50 }]
+			id: "1736ACB6F4E5E5CB"
+			rewards: [{
+				id: "48793F412C3DBC1A"
+				type: "xp"
+				xp: 50
+			}]
+			tasks: [{
+				id: "5F46DBAD647518B2"
+				item: "create:propeller"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
 		}
 		{
-			id: "meicloud_q_first_cannon"
-			x: 3.0d, y: 0.0d
-			subtitle: "Build a cannon."
-			dependencies: ["meicloud_q_first_propeller"]
-			tasks: [{ id: "task_cannon", type: "item", item: "bigcannons:cannon_barrel" }]
-			rewards: [{ id: "r2", type: "xp", xp: 100 }]
+			id: "7BFCFA289FBEFBE1"
+			rewards: [{
+				id: "1EEB39087FC58321"
+				type: "xp"
+				xp: 100
+			}]
+			tasks: [{
+				id: "6962E08ECDC7C428"
+				item: "createbigcannons:cast_iron_cannon_barrel"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 0.0d
 		}
 		{
-			id: "meicloud_q_first_rocket"
-			x: 6.0d, y: 0.0d
-			subtitle: "Reach orbit."
-			dependencies: ["meicloud_q_first_cannon"]
-			tasks: [{ id: "task_rocket", type: "item", item: "creating_space:rocket" }]
-			rewards: [{ id: "r3", type: "xp", xp: 500 }]
+			id: "3B5DF6DAEE1B2711"
+			rewards: [{
+				id: "0405E9F9A4D878C3"
+				type: "xp"
+				xp: 500
+			}]
+			tasks: [{
+				id: "6AE496991D411F0A"
+				item: "creatingspace:rocket_engine"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 0.0d
 		}
 	]
 }

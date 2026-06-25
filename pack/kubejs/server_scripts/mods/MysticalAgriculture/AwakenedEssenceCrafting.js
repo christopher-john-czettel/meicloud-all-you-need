@@ -1,5 +1,3 @@
-// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 10.
-// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.
 
 ServerEvents.recipes(allthemods =>{
     function awakenedEssenceCrafting(essenceCount, input, ingredients, result){
@@ -52,5 +50,3 @@ ServerEvents.recipes(allthemods =>{
     awakenedEssenceCrafting(40, 'minecraft:lily_pad', {item1: 'allthemodium:vibranium_plate', item2: 'reliquary:fertile_essence', item3: 'reliquary:fertile_essence', item4: 'reliquary:fertile_essence'}, 'reliquary:fertile_lily_pad')
 })
 
-// This File has been authored by AllTheMods Staff, or a Community contributor for use in AllTheMods - AllTheMods 10.
-// As all AllTheMods packs are licensed under All Rights Reserved, this file is not allowed to be used in any public packs not released by the AllTheMods Team, without explicit permission.
